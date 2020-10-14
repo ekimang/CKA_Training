@@ -1,0 +1,3 @@
+- name: Create the ReadWriteOnce PV
+  command: kubectl apply -f https://static.alta3.com/courses/cka/exam/rwopv.yml
+  

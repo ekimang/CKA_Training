@@ -1,0 +1,10 @@
+apiVersion: certificates.k8s.io/v1beta1
+kind: CertificateSigningRequest
+metadata:
+  name: stu
+spec:
+  groups:
+  - system:authenticated
+  usages:
+  - client auth
+  request: KEY 

@@ -1,0 +1,538 @@
+2020-10-02 18:11:00,054 p=6521 u=student n=ansible | PLAY [CKA Setup] *******************************************************************************************************************************************************
+2020-10-02 18:11:04,048 p=6521 u=student n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2020-10-02 18:11:04,051 p=6521 u=student n=ansible | ok: [node-02]
+2020-10-02 18:11:04,105 p=6521 u=student n=ansible | ok: [node-01]
+2020-10-02 18:11:04,208 p=6521 u=student n=ansible | ok: [master-01]
+2020-10-02 18:11:04,224 p=6521 u=student n=ansible | ok: [node-03]
+2020-10-02 18:11:04,244 p=6521 u=student n=ansible | ok: [bchd]
+2020-10-02 18:11:06,255 p=6521 u=student n=ansible | ok: [master-02]
+2020-10-02 18:11:06,481 p=6521 u=student n=ansible | ok: [master-03]
+2020-10-02 18:11:07,742 p=6521 u=student n=ansible | TASK [command] *********************************************************************************************************************************************************
+2020-10-02 18:11:07,744 p=6521 u=student n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2020-10-02 18:11:07,744 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:11:07,837 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:11:07,847 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:11:07,936 p=6521 u=student n=ansible | changed: [master-01]
+2020-10-02 18:11:07,951 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:11:08,582 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:11:08,583 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:11:09,144 p=6521 u=student n=ansible | TASK [command] *********************************************************************************************************************************************************
+2020-10-02 18:11:09,146 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:11:09,304 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:11:09,417 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:11:09,420 p=6521 u=student n=ansible | changed: [master-01]
+2020-10-02 18:11:09,432 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:11:09,616 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:11:09,793 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:11:10,399 p=6521 u=student n=ansible | TASK [command] *********************************************************************************************************************************************************
+2020-10-02 18:11:10,401 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:11:10,529 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:11:10,603 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:11:10,633 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:11:10,707 p=6521 u=student n=ansible | changed: [master-01]
+2020-10-02 18:11:10,908 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:11:11,024 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:11:11,751 p=6521 u=student n=ansible | TASK [kubeadmteardown : command] ***************************************************************************************************************************************
+2020-10-02 18:11:11,753 p=6521 u=student n=ansible | fatal: [node-01]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-02 18:11:11,753 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:11:11,796 p=6521 u=student n=ansible | fatal: [bchd]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-02 18:11:11,798 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:11:11,842 p=6521 u=student n=ansible | fatal: [node-02]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-02 18:11:11,843 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:11:11,845 p=6521 u=student n=ansible | fatal: [node-03]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-02 18:11:11,846 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:11:11,941 p=6521 u=student n=ansible | fatal: [master-01]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-02 18:11:11,942 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:11:12,292 p=6521 u=student n=ansible | fatal: [master-02]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-02 18:11:12,293 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:11:12,326 p=6521 u=student n=ansible | fatal: [master-03]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-02 18:11:12,327 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:11:12,983 p=6521 u=student n=ansible | TASK [kubeadmteardown : command] ***************************************************************************************************************************************
+2020-10-02 18:11:12,988 p=6521 u=student n=ansible | [WARNING]: Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn:
+false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-02 18:11:12,989 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:11:13,049 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:11:13,078 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:11:13,226 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:11:13,251 p=6521 u=student n=ansible | changed: [master-01]
+2020-10-02 18:11:13,522 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:11:13,566 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:11:15,070 p=6521 u=student n=ansible | TASK [kubeadm1.18 : template] ******************************************************************************************************************************************
+2020-10-02 18:11:15,072 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:12:12,541 p=6521 u=student n=ansible | TASK [kubeadm1.18 : install k8s pre-reqs] ******************************************************************************************************************************
+2020-10-02 18:12:12,542 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:13:15,832 p=6521 u=student n=ansible | TASK [kubeadm1.18 : Kubeadm init] **************************************************************************************************************************************
+2020-10-02 18:13:15,833 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:13:16,670 p=6521 u=student n=ansible | TASK [kubeadm1.18 : setup kubectl config] ******************************************************************************************************************************
+2020-10-02 18:13:16,670 p=6521 u=student n=ansible | [WARNING]: Consider using the file module with state=directory rather than running 'mkdir'.  If you need to use command because file is insufficient you can add 'warn:
+false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-02 18:13:16,671 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:13:17,369 p=6521 u=student n=ansible | TASK [kubeadm1.18 : setup kubectl config] ******************************************************************************************************************************
+2020-10-02 18:13:17,374 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:13:18,100 p=6521 u=student n=ansible | TASK [kubeadm1.18 : setup kubectl config] ******************************************************************************************************************************
+2020-10-02 18:13:18,102 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:13:21,228 p=6521 u=student n=ansible | TASK [kubeadm1.18 : Starting CNI (Calico)] *****************************************************************************************************************************
+2020-10-02 18:13:21,229 p=6521 u=student n=ansible | changed: [master-02]
+2020-10-02 18:13:23,429 p=6521 u=student n=ansible | TASK [kubeadm1.19 : template] ******************************************************************************************************************************************
+2020-10-02 18:13:23,430 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:14:31,777 p=6521 u=student n=ansible | TASK [kubeadm1.19 : install k8s pre-reqs] ******************************************************************************************************************************
+2020-10-02 18:14:31,778 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:15:28,159 p=6521 u=student n=ansible | TASK [kubeadm1.19 : Kubeadm init] **************************************************************************************************************************************
+2020-10-02 18:15:28,160 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:15:29,083 p=6521 u=student n=ansible | TASK [kubeadm1.19 : setup kubectl config] ******************************************************************************************************************************
+2020-10-02 18:15:29,085 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:15:29,932 p=6521 u=student n=ansible | TASK [kubeadm1.19 : setup kubectl config] ******************************************************************************************************************************
+2020-10-02 18:15:29,933 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:15:30,850 p=6521 u=student n=ansible | TASK [kubeadm1.19 : setup kubectl config] ******************************************************************************************************************************
+2020-10-02 18:15:30,851 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:15:34,432 p=6521 u=student n=ansible | TASK [kubeadm1.19 : Starting CNI (Calico)] *****************************************************************************************************************************
+2020-10-02 18:15:34,433 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:15:36,777 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : template] *********************************************************************************************************************************
+2020-10-02 18:15:36,778 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:15:36,880 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:15:37,080 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:15:37,098 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:16:20,943 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : install k8s pre-reqs] *********************************************************************************************************************
+2020-10-02 18:16:20,945 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:16:43,998 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:16:48,381 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:16:49,537 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:17:48,930 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Kubeadm init] *****************************************************************************************************************************
+2020-10-02 18:17:48,931 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:17:49,727 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : setup kubectl config] *********************************************************************************************************************
+2020-10-02 18:17:49,731 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:17:50,398 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : setup kubectl config] *********************************************************************************************************************
+2020-10-02 18:17:50,399 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:17:51,065 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : setup kubectl config] *********************************************************************************************************************
+2020-10-02 18:17:51,066 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:17:55,937 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Starting CNI (Calico)] ********************************************************************************************************************
+2020-10-02 18:17:55,938 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:17:57,810 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Get join command] *************************************************************************************************************************
+2020-10-02 18:17:57,811 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:17:58,191 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : print join] *******************************************************************************************************************************
+2020-10-02 18:17:58,226 p=6521 u=student n=ansible | ok: [bchd] => {
+    "kjoin.stdout": "kubeadm join 10.17.205.112:6443 --token hlx2ur.azpbhorw1tfof7m5     --discovery-token-ca-cert-hash sha256:672a8095680257a7ace95f07f9aae9c77abb6dac8a8238a016bdc89a6e2e9ac9 "
+}
+2020-10-02 18:17:58,744 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : set_fact] *********************************************************************************************************************************
+2020-10-02 18:17:58,747 p=6521 u=student n=ansible | ok: [bchd]
+2020-10-02 18:17:58,932 p=6521 u=student n=ansible | ok: [node-01]
+2020-10-02 18:17:58,998 p=6521 u=student n=ansible | ok: [node-02]
+2020-10-02 18:17:59,005 p=6521 u=student n=ansible | ok: [node-03]
+2020-10-02 18:17:59,171 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : print join again] *************************************************************************************************************************
+2020-10-02 18:17:59,178 p=6521 u=student n=ansible | ok: [bchd] => {
+    "join_command": "kubeadm join 10.17.205.112:6443 --token hlx2ur.azpbhorw1tfof7m5     --discovery-token-ca-cert-hash sha256:672a8095680257a7ace95f07f9aae9c77abb6dac8a8238a016bdc89a6e2e9ac9 "
+}
+2020-10-02 18:18:17,475 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : join nodes] *******************************************************************************************************************************
+2020-10-02 18:18:17,488 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:18:17,571 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:18:18,206 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:18:19,639 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Get Metrics Server] ***********************************************************************************************************************
+2020-10-02 18:18:19,646 p=6521 u=student n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'wget'.  If you need to use command because get_url or uri is insufficient you can add 'warn:
+false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-02 18:18:19,646 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:19,688 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:18:19,746 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:18:20,100 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:18:23,240 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Start Metrics Server] *********************************************************************************************************************
+2020-10-02 18:18:23,242 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:25,004 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Get other Metrics Server bit] *************************************************************************************************************
+2020-10-02 18:18:25,006 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:25,318 p=6521 u=student n=ansible | changed: [node-01]
+2020-10-02 18:18:25,670 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:18:25,811 p=6521 u=student n=ansible | changed: [node-03]
+2020-10-02 18:18:28,677 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Start other Metrics Server bit] ***********************************************************************************************************
+2020-10-02 18:18:28,685 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:33,691 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Ingress Controller Setup] *****************************************************************************************************************
+2020-10-02 18:18:33,694 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:36,510 p=6521 u=student n=ansible | TASK [kubeadm1.19withNodes : Baremetal] ********************************************************************************************************************************
+2020-10-02 18:18:36,511 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:47,962 p=6521 u=student n=ansible | TASK [etcdbackup : install etcd-client] ********************************************************************************************************************************
+2020-10-02 18:18:47,969 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:18:49,213 p=6521 u=student n=ansible | TASK [etcdbackup : mkdir] **********************************************************************************************************************************************
+2020-10-02 18:18:49,215 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:18:50,379 p=6521 u=student n=ansible | TASK [etcdbackup : create a pod] ***************************************************************************************************************************************
+2020-10-02 18:18:50,380 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:18:51,343 p=6521 u=student n=ansible | TASK [etcdbackup : shell] **********************************************************************************************************************************************
+2020-10-02 18:18:51,344 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:18:52,377 p=6521 u=student n=ansible | TASK [etcdbackup : delete the isitback pod] ****************************************************************************************************************************
+2020-10-02 18:18:52,378 p=6521 u=student n=ansible | changed: [master-03]
+2020-10-02 18:18:53,421 p=6521 u=student n=ansible | TASK [cputopper : command] *********************************************************************************************************************************************
+2020-10-02 18:18:53,422 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:55,379 p=6521 u=student n=ansible | TASK [cputopper : command] *********************************************************************************************************************************************
+2020-10-02 18:18:55,380 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:57,181 p=6521 u=student n=ansible | TASK [cputopper : command] *********************************************************************************************************************************************
+2020-10-02 18:18:57,182 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:18:59,010 p=6521 u=student n=ansible | TASK [cputopper : command] *********************************************************************************************************************************************
+2020-10-02 18:18:59,015 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:19:00,338 p=6521 u=student n=ansible | TASK [dragon : command] ************************************************************************************************************************************************
+2020-10-02 18:19:00,341 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:19:01,325 p=6521 u=student n=ansible | TASK [labeler : command] ***********************************************************************************************************************************************
+2020-10-02 18:19:01,326 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:02,380 p=6521 u=student n=ansible | TASK [imagepuller : command] *******************************************************************************************************************************************
+2020-10-02 18:20:02,382 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:41,350 p=6521 u=student n=ansible | TASK [imagepuller : command] *******************************************************************************************************************************************
+2020-10-02 18:20:41,353 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:42,242 p=6521 u=student n=ansible | TASK [imagepuller : command] *******************************************************************************************************************************************
+2020-10-02 18:20:42,245 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:43,047 p=6521 u=student n=ansible | TASK [imagepuller : command] *******************************************************************************************************************************************
+2020-10-02 18:20:43,049 p=6521 u=student n=ansible | fatal: [bchd]: FAILED! => {"changed": true, "cmd": ["docker", "image", "push", "reg.alta3.com/aloha"], "delta": "0:00:00.147381", "end": "2020-10-02 18:20:42.979398", "msg": "non-zero return code", "rc": 1, "start": "2020-10-02 18:20:42.832017", "stderr": "Get https://reg.alta3.com/v2/: dial tcp: lookup reg.alta3.com on [::1]:53: read udp [::1]:48258->[::1]:53: read: connection refused", "stderr_lines": ["Get https://reg.alta3.com/v2/: dial tcp: lookup reg.alta3.com on [::1]:53: read udp [::1]:48258->[::1]:53: read: connection refused"], "stdout": "The push refers to repository [reg.alta3.com/aloha]", "stdout_lines": ["The push refers to repository [reg.alta3.com/aloha]"]}
+2020-10-02 18:20:43,050 p=6521 u=student n=ansible | ...ignoring
+2020-10-02 18:20:44,486 p=6521 u=student n=ansible | TASK [aloha : command] *************************************************************************************************************************************************
+2020-10-02 18:20:44,488 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:45,913 p=6521 u=student n=ansible | TASK [pvmaker : Create the ReadWriteOnce PV] ***************************************************************************************************************************
+2020-10-02 18:20:45,914 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:48,141 p=6521 u=student n=ansible | TASK [deppy : command] *************************************************************************************************************************************************
+2020-10-02 18:20:48,151 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:50,063 p=6521 u=student n=ansible | TASK [filenotfound : command] ******************************************************************************************************************************************
+2020-10-02 18:20:50,065 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:51,646 p=6521 u=student n=ansible | TASK [loggy : Start up the logger pod] *********************************************************************************************************************************
+2020-10-02 18:20:51,647 p=6521 u=student n=ansible | changed: [bchd]
+2020-10-02 18:20:56,739 p=6521 u=student n=ansible | TASK [stopkubelet : stop kubelet] **************************************************************************************************************************************
+2020-10-02 18:20:56,740 p=6521 u=student n=ansible | changed: [node-02]
+2020-10-02 18:20:56,783 p=6521 u=student n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2020-10-02 18:20:56,784 p=6521 u=student n=ansible | bchd                       : ok=38   changed=33   unreachable=0    failed=0    skipped=21   rescued=0    ignored=2   
+2020-10-02 18:20:56,785 p=6521 u=student n=ansible | master-01                  : ok=6    changed=4    unreachable=0    failed=0    skipped=53   rescued=0    ignored=1   
+2020-10-02 18:20:56,786 p=6521 u=student n=ansible | master-02                  : ok=13   changed=11   unreachable=0    failed=0    skipped=46   rescued=0    ignored=1   
+2020-10-02 18:20:56,787 p=6521 u=student n=ansible | master-03                  : ok=18   changed=16   unreachable=0    failed=0    skipped=41   rescued=0    ignored=1   
+2020-10-02 18:20:56,788 p=6521 u=student n=ansible | node-01                    : ok=12   changed=9    unreachable=0    failed=0    skipped=47   rescued=0    ignored=1   
+2020-10-02 18:20:56,789 p=6521 u=student n=ansible | node-02                    : ok=13   changed=10   unreachable=0    failed=0    skipped=46   rescued=0    ignored=1   
+2020-10-02 18:20:56,790 p=6521 u=student n=ansible | node-03                    : ok=12   changed=9    unreachable=0    failed=0    skipped=47   rescued=0    ignored=1   
+2020-10-09 14:53:59,030 p=12382 u=student n=ansible |  __________________
+< PLAY [CKA Setup] >
+ ------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:01,303 p=12382 u=student n=ansible |  ________________________
+< TASK [Gathering Facts] >
+ ------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:01,307 p=12382 u=student n=ansible | ok: [node-01]
+2020-10-09 14:54:01,349 p=12382 u=student n=ansible | ok: [master-01]
+2020-10-09 14:54:01,399 p=12382 u=student n=ansible | ok: [bchd]
+2020-10-09 14:54:01,500 p=12382 u=student n=ansible | ok: [node-02]
+2020-10-09 14:54:01,539 p=12382 u=student n=ansible | ok: [node-03]
+2020-10-09 14:54:02,636 p=12382 u=student n=ansible | ok: [master-02]
+2020-10-09 14:54:02,652 p=12382 u=student n=ansible | ok: [master-03]
+2020-10-09 14:54:03,719 p=12382 u=student n=ansible |  ________________
+< TASK [command] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:03,720 p=12382 u=student n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running
+sudo
+
+2020-10-09 14:54:03,721 p=12382 u=student n=ansible | changed: [bchd]
+2020-10-09 14:54:03,774 p=12382 u=student n=ansible | changed: [node-03]
+2020-10-09 14:54:03,777 p=12382 u=student n=ansible | changed: [master-01]
+2020-10-09 14:54:03,779 p=12382 u=student n=ansible | changed: [node-02]
+2020-10-09 14:54:03,781 p=12382 u=student n=ansible | changed: [node-01]
+2020-10-09 14:54:04,214 p=12382 u=student n=ansible | changed: [master-02]
+2020-10-09 14:54:04,320 p=12382 u=student n=ansible | changed: [master-03]
+2020-10-09 14:54:04,999 p=12382 u=student n=ansible |  ________________
+< TASK [command] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:05,001 p=12382 u=student n=ansible | changed: [bchd]
+2020-10-09 14:54:05,143 p=12382 u=student n=ansible | changed: [node-01]
+2020-10-09 14:54:05,214 p=12382 u=student n=ansible | changed: [node-02]
+2020-10-09 14:54:05,223 p=12382 u=student n=ansible | changed: [master-01]
+2020-10-09 14:54:05,531 p=12382 u=student n=ansible | changed: [node-03]
+2020-10-09 14:54:05,586 p=12382 u=student n=ansible | changed: [master-02]
+2020-10-09 14:54:05,640 p=12382 u=student n=ansible | changed: [master-03]
+2020-10-09 14:54:06,398 p=12382 u=student n=ansible |  ________________
+< TASK [command] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:06,399 p=12382 u=student n=ansible | changed: [bchd]
+2020-10-09 14:54:06,488 p=12382 u=student n=ansible | changed: [node-01]
+2020-10-09 14:54:06,556 p=12382 u=student n=ansible | changed: [node-03]
+2020-10-09 14:54:06,621 p=12382 u=student n=ansible | changed: [master-01]
+2020-10-09 14:54:06,630 p=12382 u=student n=ansible | changed: [node-02]
+2020-10-09 14:54:06,970 p=12382 u=student n=ansible | changed: [master-02]
+2020-10-09 14:54:07,042 p=12382 u=student n=ansible | changed: [master-03]
+2020-10-09 14:54:07,758 p=12382 u=student n=ansible |  __________________________________
+< TASK [kubeadmteardown : command] >
+ ----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:07,760 p=12382 u=student n=ansible | fatal: [bchd]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-09 14:54:07,760 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:54:07,790 p=12382 u=student n=ansible | fatal: [node-01]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-09 14:54:07,791 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:54:07,914 p=12382 u=student n=ansible | fatal: [node-02]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-09 14:54:07,914 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:54:07,974 p=12382 u=student n=ansible | fatal: [node-03]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-09 14:54:07,974 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:54:08,046 p=12382 u=student n=ansible | fatal: [master-01]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-09 14:54:08,046 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:54:08,206 p=12382 u=student n=ansible | fatal: [master-02]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-09 14:54:08,206 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:54:08,318 p=12382 u=student n=ansible | fatal: [master-03]: FAILED! => {"changed": false, "cmd": "kubeadm reset --force", "msg": "[Errno 2] No such file or directory: b'kubeadm': b'kubeadm'", "rc": 2}
+2020-10-09 14:54:08,318 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:54:09,027 p=12382 u=student n=ansible |  __________________________________
+< TASK [kubeadmteardown : command] >
+ ----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:09,029 p=12382 u=student n=ansible | [WARNING]: Consider using the file module with state=absent rather than running 'rm'.  If
+you need to use command because file is insufficient you can add 'warn: false' to this
+command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-09 14:54:09,029 p=12382 u=student n=ansible | changed: [bchd]
+2020-10-09 14:54:09,074 p=12382 u=student n=ansible | changed: [node-01]
+2020-10-09 14:54:09,174 p=12382 u=student n=ansible | changed: [node-03]
+2020-10-09 14:54:09,225 p=12382 u=student n=ansible | changed: [master-01]
+2020-10-09 14:54:09,259 p=12382 u=student n=ansible | changed: [node-02]
+2020-10-09 14:54:09,602 p=12382 u=student n=ansible | changed: [master-02]
+2020-10-09 14:54:09,654 p=12382 u=student n=ansible | changed: [master-03]
+2020-10-09 14:54:11,470 p=12382 u=student n=ansible |  _______________________________
+< TASK [kubeadm1.18 : template] >
+ -------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:54:11,471 p=12382 u=student n=ansible | changed: [master-02]
+2020-10-09 14:55:20,894 p=12382 u=student n=ansible |  ___________________________________________
+< TASK [kubeadm1.18 : install k8s pre-reqs] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:55:20,896 p=12382 u=student n=ansible | changed: [master-02]
+2020-10-09 14:55:22,703 p=12382 u=student n=ansible |  ___________________________________
+< TASK [kubeadm1.18 : Kubeadm init] >
+ -----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:55:22,706 p=12382 u=student n=ansible | fatal: [master-02]: FAILED! => {"changed": true, "cmd": ["kubeadm", "init", "--pod-network-cidr=192.168.0.0/16", "--cri-socket", "unix:///run/containerd/containerd.sock", "--ignore-preflight-errors=NumCPU", "--apiserver-cert-extra-sans", "bchd"], "delta": "0:00:01.014826", "end": "2020-10-09 14:55:22.601820", "msg": "non-zero return code", "rc": 1, "start": "2020-10-09 14:55:21.586994", "stderr": "I1009 14:55:22.117276    8870 version.go:252] remote version is much newer: v1.19.2; falling back to: stable-1.18\nW1009 14:55:22.258503    8870 configset.go:202] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]\nerror execution phase preflight: [preflight] Some fatal errors occurred:\n\t[ERROR Port-6443]: Port 6443 is in use\n\t[ERROR Port-10259]: Port 10259 is in use\n\t[ERROR Port-10257]: Port 10257 is in use\n\t[ERROR Port-2379]: Port 2379 is in use\n\t[ERROR Port-2380]: Port 2380 is in use\n\t[ERROR DirAvailable--var-lib-etcd]: /var/lib/etcd is not empty\n[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`\nTo see the stack trace of this error execute with --v=5 or higher", "stderr_lines": ["I1009 14:55:22.117276    8870 version.go:252] remote version is much newer: v1.19.2; falling back to: stable-1.18", "W1009 14:55:22.258503    8870 configset.go:202] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]", "error execution phase preflight: [preflight] Some fatal errors occurred:", "\t[ERROR Port-6443]: Port 6443 is in use", "\t[ERROR Port-10259]: Port 10259 is in use", "\t[ERROR Port-10257]: Port 10257 is in use", "\t[ERROR Port-2379]: Port 2379 is in use", "\t[ERROR Port-2380]: Port 2380 is in use", "\t[ERROR DirAvailable--var-lib-etcd]: /var/lib/etcd is not empty", "[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`", "To see the stack trace of this error execute with --v=5 or higher"], "stdout": "[init] Using Kubernetes version: v1.18.9\n[preflight] Running pre-flight checks", "stdout_lines": ["[init] Using Kubernetes version: v1.18.9", "[preflight] Running pre-flight checks"]}
+2020-10-09 14:55:22,706 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:55:23,496 p=12382 u=student n=ansible |  ___________________________________________
+< TASK [kubeadm1.18 : setup kubectl config] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:55:23,498 p=12382 u=student n=ansible | [WARNING]: Consider using the file module with state=directory rather than running
+'mkdir'.  If you need to use command because file is insufficient you can add 'warn:
+false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of
+this message.
+
+2020-10-09 14:55:23,498 p=12382 u=student n=ansible | changed: [master-02]
+2020-10-09 14:55:24,278 p=12382 u=student n=ansible |  ___________________________________________
+< TASK [kubeadm1.18 : setup kubectl config] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:55:24,280 p=12382 u=student n=ansible | fatal: [master-02]: FAILED! => {"changed": true, "cmd": ["sudo", "cp", "/etc/kubernetes/admin.conf", "/home/student/.kube/config"], "delta": "0:00:00.018012", "end": "2020-10-09 14:55:24.171134", "msg": "non-zero return code", "rc": 1, "start": "2020-10-09 14:55:24.153122", "stderr": "cp: cannot stat '/etc/kubernetes/admin.conf': No such file or directory", "stderr_lines": ["cp: cannot stat '/etc/kubernetes/admin.conf': No such file or directory"], "stdout": "", "stdout_lines": []}
+2020-10-09 14:55:27,085 p=12382 u=student n=ansible |  _______________________________
+< TASK [kubeadm1.19 : template] >
+ -------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:55:27,087 p=12382 u=student n=ansible | changed: [master-03]
+2020-10-09 14:56:40,577 p=12382 u=student n=ansible |  ___________________________________________
+< TASK [kubeadm1.19 : install k8s pre-reqs] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:56:40,578 p=12382 u=student n=ansible | changed: [master-03]
+2020-10-09 14:56:42,262 p=12382 u=student n=ansible |  ___________________________________
+< TASK [kubeadm1.19 : Kubeadm init] >
+ -----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:56:42,264 p=12382 u=student n=ansible | fatal: [master-03]: FAILED! => {"changed": true, "cmd": ["kubeadm", "init", "--pod-network-cidr=192.168.0.0/16", "--cri-socket", "unix:///run/containerd/containerd.sock", "--ignore-preflight-errors=NumCPU", "--apiserver-cert-extra-sans", "bchd"], "delta": "0:00:00.871987", "end": "2020-10-09 14:56:42.147593", "msg": "non-zero return code", "rc": 1, "start": "2020-10-09 14:56:41.275606", "stderr": "W1009 14:56:41.825262    8843 configset.go:348] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]\nerror execution phase preflight: [preflight] Some fatal errors occurred:\n\t[ERROR Port-6443]: Port 6443 is in use\n\t[ERROR Port-10259]: Port 10259 is in use\n\t[ERROR Port-10257]: Port 10257 is in use\n\t[ERROR Port-2379]: Port 2379 is in use\n\t[ERROR Port-2380]: Port 2380 is in use\n\t[ERROR DirAvailable--var-lib-etcd]: /var/lib/etcd is not empty\n[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`\nTo see the stack trace of this error execute with --v=5 or higher", "stderr_lines": ["W1009 14:56:41.825262    8843 configset.go:348] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]", "error execution phase preflight: [preflight] Some fatal errors occurred:", "\t[ERROR Port-6443]: Port 6443 is in use", "\t[ERROR Port-10259]: Port 10259 is in use", "\t[ERROR Port-10257]: Port 10257 is in use", "\t[ERROR Port-2379]: Port 2379 is in use", "\t[ERROR Port-2380]: Port 2380 is in use", "\t[ERROR DirAvailable--var-lib-etcd]: /var/lib/etcd is not empty", "[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`", "To see the stack trace of this error execute with --v=5 or higher"], "stdout": "[init] Using Kubernetes version: v1.19.2\n[preflight] Running pre-flight checks", "stdout_lines": ["[init] Using Kubernetes version: v1.19.2", "[preflight] Running pre-flight checks"]}
+2020-10-09 14:56:42,265 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:56:43,001 p=12382 u=student n=ansible |  ___________________________________________
+< TASK [kubeadm1.19 : setup kubectl config] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:56:43,003 p=12382 u=student n=ansible | changed: [master-03]
+2020-10-09 14:56:43,812 p=12382 u=student n=ansible |  ___________________________________________
+< TASK [kubeadm1.19 : setup kubectl config] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:56:43,815 p=12382 u=student n=ansible | fatal: [master-03]: FAILED! => {"changed": true, "cmd": ["sudo", "cp", "/etc/kubernetes/admin.conf", "/home/student/.kube/config"], "delta": "0:00:00.015511", "end": "2020-10-09 14:56:43.720694", "msg": "non-zero return code", "rc": 1, "start": "2020-10-09 14:56:43.705183", "stderr": "cp: cannot stat '/etc/kubernetes/admin.conf': No such file or directory", "stderr_lines": ["cp: cannot stat '/etc/kubernetes/admin.conf': No such file or directory"], "stdout": "", "stdout_lines": []}
+2020-10-09 14:56:45,883 p=12382 u=student n=ansible |  ________________________________________
+< TASK [kubeadm1.19withNodes : template] >
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:56:45,886 p=12382 u=student n=ansible | changed: [node-01]
+2020-10-09 14:56:46,275 p=12382 u=student n=ansible | changed: [bchd]
+2020-10-09 14:56:46,637 p=12382 u=student n=ansible | changed: [node-02]
+2020-10-09 14:56:47,069 p=12382 u=student n=ansible | changed: [node-03]
+2020-10-09 14:57:30,920 p=12382 u=student n=ansible |  ____________________________________________________
+< TASK [kubeadm1.19withNodes : install k8s pre-reqs] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:57:30,921 p=12382 u=student n=ansible | changed: [bchd]
+2020-10-09 14:57:57,142 p=12382 u=student n=ansible | changed: [node-01]
+2020-10-09 14:58:04,036 p=12382 u=student n=ansible | changed: [node-02]
+2020-10-09 14:58:04,597 p=12382 u=student n=ansible | changed: [node-03]
+2020-10-09 14:58:11,023 p=12382 u=student n=ansible |  ____________________________________________
+< TASK [kubeadm1.19withNodes : Kubeadm init] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:58:11,025 p=12382 u=student n=ansible | fatal: [bchd]: FAILED! => {"changed": true, "cmd": ["kubeadm", "init", "--pod-network-cidr=192.168.0.0/16", "--cri-socket", "unix:///run/containerd/containerd.sock", "--ignore-preflight-errors=NumCPU", "--apiserver-cert-extra-sans", "bchd"], "delta": "0:00:05.760005", "end": "2020-10-09 14:58:10.922487", "msg": "non-zero return code", "rc": 1, "start": "2020-10-09 14:58:05.162482", "stderr": "W1009 14:58:10.658823   15469 configset.go:348] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]\nerror execution phase preflight: [preflight] Some fatal errors occurred:\n\t[ERROR Port-6443]: Port 6443 is in use\n[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`\nTo see the stack trace of this error execute with --v=5 or higher", "stderr_lines": ["W1009 14:58:10.658823   15469 configset.go:348] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]", "error execution phase preflight: [preflight] Some fatal errors occurred:", "\t[ERROR Port-6443]: Port 6443 is in use", "[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`", "To see the stack trace of this error execute with --v=5 or higher"], "stdout": "[init] Using Kubernetes version: v1.19.2\n[preflight] Running pre-flight checks", "stdout_lines": ["[init] Using Kubernetes version: v1.19.2", "[preflight] Running pre-flight checks"]}
+2020-10-09 14:58:11,026 p=12382 u=student n=ansible | ...ignoring
+2020-10-09 14:58:11,646 p=12382 u=student n=ansible |  ____________________________________________________
+< TASK [kubeadm1.19withNodes : setup kubectl config] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:58:11,648 p=12382 u=student n=ansible | changed: [bchd]
+2020-10-09 14:58:12,322 p=12382 u=student n=ansible |  ____________________________________________________
+< TASK [kubeadm1.19withNodes : setup kubectl config] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:58:12,325 p=12382 u=student n=ansible | fatal: [bchd]: FAILED! => {"changed": true, "cmd": ["sudo", "cp", "/etc/kubernetes/admin.conf", "/home/student/.kube/config"], "delta": "0:00:00.017243", "end": "2020-10-09 14:58:12.222042", "msg": "non-zero return code", "rc": 1, "start": "2020-10-09 14:58:12.204799", "stderr": "cp: cannot stat '/etc/kubernetes/admin.conf': No such file or directory", "stderr_lines": ["cp: cannot stat '/etc/kubernetes/admin.conf': No such file or directory"], "stdout": "", "stdout_lines": []}
+2020-10-09 14:58:13,222 p=12382 u=student n=ansible |  ________________________________________
+< TASK [kubeadm1.19withNodes : set_fact] >
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:58:13,223 p=12382 u=student n=ansible | fatal: [node-01]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.vars.hostvars.HostVarsVars object' has no attribute 'kjoin'\n\nThe error appears to be in '/home/student/exam-setup/roles/kubeadm1.19withNodes/tasks/main.yml': line 41, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- set_fact:\n  ^ here\n"}
+2020-10-09 14:58:13,252 p=12382 u=student n=ansible | fatal: [node-03]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.vars.hostvars.HostVarsVars object' has no attribute 'kjoin'\n\nThe error appears to be in '/home/student/exam-setup/roles/kubeadm1.19withNodes/tasks/main.yml': line 41, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- set_fact:\n  ^ here\n"}
+2020-10-09 14:58:13,255 p=12382 u=student n=ansible | fatal: [node-02]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.vars.hostvars.HostVarsVars object' has no attribute 'kjoin'\n\nThe error appears to be in '/home/student/exam-setup/roles/kubeadm1.19withNodes/tasks/main.yml': line 41, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- set_fact:\n  ^ here\n"}
+2020-10-09 14:58:15,569 p=12382 u=student n=ansible |  ____________
+< PLAY RECAP >
+ ------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+
+2020-10-09 14:58:15,571 p=12382 u=student n=ansible | bchd                       : ok=10   changed=8    unreachable=0    failed=1    skipped=14   rescued=0    ignored=2   
+2020-10-09 14:58:15,572 p=12382 u=student n=ansible | master-01                  : ok=6    changed=4    unreachable=0    failed=0    skipped=53   rescued=0    ignored=1   
+2020-10-09 14:58:15,573 p=12382 u=student n=ansible | master-02                  : ok=10   changed=8    unreachable=0    failed=1    skipped=0    rescued=0    ignored=2   
+2020-10-09 14:58:15,574 p=12382 u=student n=ansible | master-03                  : ok=10   changed=8    unreachable=0    failed=1    skipped=7    rescued=0    ignored=2   
+2020-10-09 14:58:15,576 p=12382 u=student n=ansible | node-01                    : ok=8    changed=6    unreachable=0    failed=1    skipped=21   rescued=0    ignored=1   
+2020-10-09 14:58:15,577 p=12382 u=student n=ansible | node-02                    : ok=8    changed=6    unreachable=0    failed=1    skipped=21   rescued=0    ignored=1   
+2020-10-09 14:58:15,578 p=12382 u=student n=ansible | node-03                    : ok=8    changed=6    unreachable=0    failed=1    skipped=21   rescued=0    ignored=1   

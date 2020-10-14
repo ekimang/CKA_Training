@@ -3,3 +3,4 @@
   tasks:
   - command: "hostnamectl set-hostname {{ inventory_hostname }}"
     become: True
+

@@ -1,0 +1,5 @@
+---
+- name: Tear down CKA Practice Exam
+  hosts: all
+  roles:
+  - name: kubeadmteardown

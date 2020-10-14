@@ -1,0 +1,18 @@
+- name: install etcd-client
+  apt:
+    name: etcd-client
+    state: latest
+  become: True
+
+- name: mkdir
+  command: mkdir /opt/cka/help -p
+  become: True
+
+- name: create a pod
+  command: kubectl run isitback --image=nginx
+
+- shell: ETCDCTL_API=3 etcdctl snapshot save /opt/cka/help/restore.backup --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key
+  become: True
+
+- name: delete the isitback pod
+  command: kubectl delete pod isitback

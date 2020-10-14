@@ -1,0 +1,2 @@
+- command: kubectl label node node-01 disk=nvme --overwrite
+

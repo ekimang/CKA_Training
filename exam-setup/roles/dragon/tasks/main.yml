@@ -1,0 +1,1 @@
+- command: kubectl apply -f https://static.alta3.com/courses/cka/exam/dragon.yml
