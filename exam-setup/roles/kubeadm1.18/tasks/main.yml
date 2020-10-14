@@ -1,0 +1,25 @@
+- template:
+    src: "k8s-install-18.sh"
+    dest: "/tmp/k8s-install.sh"
+  become: True
+
+- name: install k8s pre-reqs
+  command: "bash /tmp/k8s-install.sh"
+  become: True
+
+- name: Kubeadm init
+  command: 'kubeadm init --pod-network-cidr=192.168.0.0/16 --cri-socket "unix:///run/containerd/containerd.sock" --ignore-preflight-errors=NumCPU --apiserver-cert-extra-sans bchd'
+  become: True
+  ignore_errors: True
+
+- name: setup kubectl config
+  command: "mkdir -p /home/student/.kube"
+
+- name: setup kubectl config
+  command: "sudo cp /etc/kubernetes/admin.conf /home/student/.kube/config"
+
+- name: setup kubectl config
+  command: "sudo chown student:student /home/student/.kube/config"
+
+- name: Starting CNI (Calico)
+  command: "kubectl apply -f https://docs.projectcalico.org/v3.8/manifests/calico.yaml"

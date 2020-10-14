@@ -1,0 +1,9 @@
+# Create ns integration
+- command: kubectl create ns integration
+  ignore_errors: True
+# Create 3 nginx pods, label: app=intensive, no cpu processes
+- command: kubectl apply -f https://static.alta3.com/courses/cka/exam/basenginx.yml
+# Create 3 nginx pods, label: app=intensive, low cpu processes
+- command:  kubectl apply -f https://static.alta3.com/courses/cka/exam/lowcpunginx.yml
+# Create 1 nginx pods, label: app=intensive, high cpu process - name nginx2784
+- command:  kubectl apply -f https://static.alta3.com/courses/cka/exam/highcpunginx.yml

@@ -1,0 +1,15 @@
+- command: wget https://static.alta3.com/courses/cka/exam/aloha.tar
+  when: inventory_hostname == 'bchd'
+
+- command: docker load -i aloha.tar
+  become: True
+  when: inventory_hostname == 'bchd'
+
+- command: docker image tag aloha reg.alta3.com/aloha
+  become: True
+  when: inventory_hostname == 'bchd'
+
+- command: docker image push reg.alta3.com/aloha
+  become: True
+  when: inventory_hostname == 'bchd'
+  ignore_errors: True
