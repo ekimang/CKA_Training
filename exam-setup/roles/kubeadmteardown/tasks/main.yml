@@ -1,6 +1,0 @@
-- command: kubeadm reset --force
-  become: True
-  ignore_errors: True
-
-- command: rm ~/.kube -rf
-  ignore_errors: True

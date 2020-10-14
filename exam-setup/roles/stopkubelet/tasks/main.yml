@@ -1,5 +1,0 @@
-- name: stop kubelet
-  systemd:
-    name: kubelet
-    state: stopped
-  become: True

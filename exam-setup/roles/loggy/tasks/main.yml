@@ -1,2 +1,0 @@
-- name: Start up the logger pod
-  command: kubectl apply -f https://static.alta3.com/courses/cka/exam/loggy.yml

@@ -1,3 +1,0 @@
-# Deployment,Service named luau. Pod returns a message on port 80 /aloha that prints 'Aloha means "hi"'
-
-- command: kubectl apply -f https://static.alta3.com/courses/cka/exam/aloha.yml
